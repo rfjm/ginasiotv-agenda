@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agenda Semanal · GinásioTV</title>
+<link rel="icon" href="assets/GCO.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500&display=block" rel="stylesheet">
+<style>
+  :root { --green: #1d6b2c; --bg: #f3f4f2; --card: #fff; --text: #1f2421; --muted: #6b726d; --line: #dfe3df; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
+  header { background: var(--green); color: #fff; padding: 18px 16px; }
+  header h1 { margin: 0 auto; max-width: 980px; font-size: 22px; letter-spacing: .5px; }
+  main { max-width: 980px; margin: 0 auto; padding: 16px; display: grid; gap: 16px; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+  h2 { margin: 0 0 12px; font-size: 17px; color: var(--green); }
+  label { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+  input { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; color: var(--text); max-width: 100%; }
+  .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+  .grow { flex: 1 1 220px; }
+  button { font: inherit; font-weight: 600; background: var(--green); color: #fff; border: 0; border-radius: 6px; padding: 9px 16px; cursor: pointer; }
+  button:disabled { opacity: .5; cursor: default; }
+  button.link { background: none; color: #b3261e; padding: 4px 8px; font-weight: 500; }
+  .hint { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+  .msg { padding: 10px 12px; border-radius: 6px; background: #eef7ef; color: var(--green); }
+  .msg.err { background: #fdecea; color: #b3261e; }
+  .msg:empty { display: none; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 14px; }
+  td, th { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 500; font-size: 12px; text-transform: uppercase; }
+  .posts { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+  .posts figure { margin: 0; }
+  .posts img { width: 100%; border-radius: 6px; border: 1px solid var(--line); display: block; }
+  .posts figcaption { display: flex; justify-content: space-between; align-items: center; font-size: 13px; margin-top: 6px; }
+  .posts figcaption a { color: var(--green); font-weight: 600; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header><h1>Agenda Semanal · GinásioTV</h1></header>
+<main>
+  <section>
+    <h2>Gerar posts</h2>
+    <form id="generate-form">
+      <div class="row">
+        <label>De <input type="date" id="from" required></label>
+        <label>Até <input type="date" id="to" required></label>
+        <button type="submit" id="generate-btn">Gerar</button>
+      </div>
+      <p class="hint" id="updated">A carregar jogos…</p>
+    </form>
+  </section>
+
+  <div class="msg" id="message"></div>
+
+  <section id="results" hidden>
+    <div class="row" style="justify-content: space-between; margin-bottom: 12px;">
+      <h2 style="margin:0">Posts gerados</h2>
+      <button type="button" id="download-all">Descarregar todas as imagens</button>
+    </div>
+    <div class="posts" id="posts"></div>
+    <p class="hint">Se o browser perguntar, permite transferir vários ficheiros deste site.</p>
+  </section>
+
+  <section>
+    <h2>Eventos manuais</h2>
+    <p class="hint" style="margin:0 0 12px">Eventos que não aparecem na FPB (ex.: convívios de minis). Entram no post do dia, ordenados pela hora. Ficam guardados neste browser.</p>
+    <div class="table-wrap"><table id="events" hidden>
+      <thead><tr><th>Data</th><th>Hora</th><th>Local</th><th>Texto</th><th></th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+    <form id="event-form">
+      <div class="row">
+        <label>Data <input type="date" name="date" required></label>
+        <label>Hora <input type="time" name="time" required></label>
+        <label class="grow">Local <input type="text" name="venue" placeholder="Pav. Eduardo Mansinho"></label>
+        <label class="grow">Texto <input type="text" name="text" placeholder="CONVÍVIO MINIS 8/10" required></label>
+        <button type="submit">Adicionar</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<script>
+const WEEKDAYS = ["DOMINGO", "SEGUNDA-FEIRA", "TERÇA-FEIRA", "QUARTA-FEIRA", "QUINTA-FEIRA", "SEXTA-FEIRA", "SÁBADO"];
+const GREEN = "#1d6b2c", LIGHT = "#47b14f";
+const W = 1080, H = 1350, PAD = 56, RIGHT = W - PAD, BOTTOM = H - 40;
+const EVENTS_KEY = "ginasiotv-agenda-manual-events";
+let data = { games: [] };
+const images = {};
+
+// ---------- utilitários ----------
+const pad2 = n => String(n).padStart(2, "0");
+const iso = d => `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
+const parseIso = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+const ddmm = s => s.slice(8, 10) + "/" + s.slice(5, 7);
+const hour = t => t.startsWith("0") ? t.slice(1) : t;
+const dayLabel = s => { const w = WEEKDAYS[parseIso(s).getDay()]; return w.charAt(0) + w.slice(1).toLowerCase() + " " + ddmm(s); };
+function message(text, error = false) {
+  const el = document.getElementById("message");
+  el.textContent = text; el.classList.toggle("err", error);
+}
+function loadImage(src) {
+  return new Promise((resolve, reject) => { const img = new Image(); img.onload = () => resolve(img); img.onerror = reject; img.src = src; });
+}
+
+// ---------- eventos manuais (guardados no browser) ----------
+function loadEvents() {
+  try { return JSON.parse(localStorage.getItem(EVENTS_KEY) || "[]"); } catch { return []; }
+}
+function saveEvents(events) {
+  events.sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+  try { localStorage.setItem(EVENTS_KEY, JSON.stringify(events)); } catch { message("Não foi possível guardar o evento neste browser.", true); }
+  renderEvents();
+}
+function renderEvents() {
+  const events = loadEvents(), table = document.getElementById("events"), body = table.querySelector("tbody");
+  table.hidden = events.length === 0;
+  body.replaceChildren(...events.map(e => {
+    const tr = document.createElement("tr");
+    for (const value of [dayLabel(e.date), e.time, e.venue, e.text]) {
+      const td = document.createElement("td"); td.textContent = value; tr.append(td);
+    }
+    const td = document.createElement("td"), btn = document.createElement("button");
+    btn.className = "link"; btn.type = "button"; btn.textContent = "Remover";
+    btn.onclick = () => saveEvents(loadEvents().filter(x => x.id !== e.id));
+    td.append(btn); tr.append(td);
+    return tr;
+  }));
+}
+document.getElementById("event-form").addEventListener("submit", ev => {
+  ev.preventDefault();
+  const f = ev.target, text = f.text.value.trim().replace(/\s+/g, " ");
+  if (!text) return;
+  const events = loadEvents();
+  events.push({ id: Math.random().toString(36).slice(2, 10), date: f.date.value, time: f.time.value,
+                venue: f.venue.value.trim().replace(/\s+/g, " "), text });
+  saveEvents(events);
+  f.reset();
+});
+
+// ---------- desenho do post (1080x1350) ----------
+// Texto com espaçamento entre letras (como letter-spacing em CSS: espaço após cada letra).
+function spacedWidth(ctx, text, spacing) {
+  let w = 0; for (const ch of text) w += ctx.measureText(ch).width + spacing; return w;
+}
+function drawSpaced(ctx, text, x, y, spacing) {
+  for (const ch of text) { ctx.fillText(ch, x, y); x += ctx.measureText(ch).width + spacing; }
+  return x;
+}
+function shadow(ctx, color, blur, dy) {
+  ctx.shadowColor = color; ctx.shadowBlur = blur; ctx.shadowOffsetX = 0; ctx.shadowOffsetY = dy;
+}
+
+function drawHeader(ctx, date) {
+  ctx.drawImage(images.background, 0, 0, W, H);
+  const logo = images.logo, lh = 92, lw = logo.width * lh / logo.height;
+  ctx.save(); shadow(ctx, "rgba(0,0,0,.25)", 4, 2);
+  ctx.drawImage(logo, (W - lw) / 2, 40, lw, lh); ctx.restore();
+
+  // — QUINTA-FEIRA | 05/11 —
+  const base = 192, size = 40, weekday = WEEKDAYS[parseIso(date).getDay()], dm = ddmm(date);
+  ctx.font = `500 ${size}px Oswald`; ctx.textBaseline = "alphabetic";
+  const wWeek = spacedWidth(ctx, weekday, 10), wDate = spacedWidth(ctx, dm, 4);
+  const dash = 46, gap = 22, total = dash + gap + wWeek + 18 + 3 + 22 + wDate + gap + dash;
+  let x = (W - total) / 2;
+  const mid = base - size * 0.36;
+  ctx.fillStyle = "#222";
+  ctx.fillRect(x, mid - 1.5, dash, 3); x += dash + gap;
+  x = drawSpaced(ctx, weekday, x, base, 10) + 18;
+  ctx.fillStyle = GREEN;
+  ctx.fillRect(x, base - size * 0.95, 3, size * 1.2); x += 3 + 22;
+  x = drawSpaced(ctx, dm, x, base, 4) + gap;
+  ctx.fillStyle = "#222";
+  ctx.fillRect(x, mid - 1.5, dash, 3);
+
+  // AGENDA SEMANAL com brilho verde
+  ctx.font = "150px 'Bebas Neue'";
+  const title = "AGENDA SEMANAL", spacing = 16, tw = spacedWidth(ctx, title, spacing) - spacing;
+  const tx = (W - tw) / 2, ty = 312;
+  ctx.fillStyle = GREEN;
+  ctx.save(); shadow(ctx, "rgba(64,190,90,.55)", 18, 0); drawSpaced(ctx, title, tx, ty, spacing); ctx.restore();
+  ctx.save(); shadow(ctx, "rgba(0,0,0,.18)", 2, 3); drawSpaced(ctx, title, tx, ty, spacing); ctx.restore();
+}
+
+// Linha do jogo em segmentos: texto normal, patrocinador (itálico verde claro) e "vs".
+function segments(entry) {
+  if (entry.text) return [{ text: entry.text.toUpperCase(), kind: "main" }];
+  const team = t => t.sponsor ? [{ text: t.text, kind: "main" }, { text: t.sponsor, kind: "sponsor" }] : [{ text: t.text, kind: "main" }];
+  return [...team(entry.home), { text: "vs", kind: "vs" }, ...team(entry.away)];
+}
+function segFont(kind, size) { return `${kind === "vs" ? size * 0.82 : size}px 'Bebas Neue'`; }
+function lineWidth(ctx, segs, size) {
+  ctx.font = `${size}px 'Bebas Neue'`;
+  const space = ctx.measureText(" ").width;
+  let w = 0;
+  segs.forEach((s, i) => {
+    ctx.font = segFont(s.kind, size);
+    w += ctx.measureText(s.text).width + (s.kind === "sponsor" ? size * 0.12 : 0);
+    if (i < segs.length - 1) w += space;
+  });
+  return w;
+}
+function drawLine(ctx, segs, size, baseline) {
+  const width = RIGHT - PAD, natural = lineWidth(ctx, segs, size);
+  if (natural > width) size = size * width / natural;  // encolhe linhas demasiado largas
+  const total = lineWidth(ctx, segs, size);
+  ctx.font = `${size}px 'Bebas Neue'`;
+  const space = ctx.measureText(" ").width;
+  let x = RIGHT - total;
+  ctx.save(); shadow(ctx, "rgba(0,0,0,.15)", 2, 2);
+  segs.forEach((s, i) => {
+    ctx.font = segFont(s.kind, size);
+    const w = ctx.measureText(s.text).width;
+    if (s.kind === "sponsor") {
+      ctx.fillStyle = LIGHT;
+      ctx.save(); ctx.translate(x, baseline); ctx.transform(1, 0, -0.2, 1, 0, 0); ctx.fillText(s.text, 0, 0); ctx.restore();
+      x += w + size * 0.12;
+    } else {
+      ctx.fillStyle = GREEN; ctx.fillText(s.text, x, baseline); x += w;
+    }
+    if (i < segs.length - 1) x += space;
+  });
+  ctx.restore();
+}
+
+function drawPost(date, entries) {
+  const canvas = document.createElement("canvas");
+  canvas.width = W; canvas.height = H;
+  const ctx = canvas.getContext("2d");
+  drawHeader(ctx, date);
+
+  // Reduz tamanhos até todos os jogos caberem (igual à versão Python).
+  const top = 370;
+  let match = 74, meta = 34, gap = 18;
+  const height = () => entries.length * (meta * 1.15 + match * 1.05 + gap) - gap;
+  while (top + height() > BOTTOM && match > 30) { match -= 2; meta = Math.max(20, meta - 1); gap = Math.max(6, gap - 1); }
+
+  let y = top;
+  ctx.textAlign = "left";
+  for (const e of entries) {
+    ctx.font = `500 ${meta}px Oswald`; ctx.fillStyle = GREEN;
+    const metaText = hour(e.time) + (e.venue ? " - " + e.venue : "");
+    ctx.fillText(metaText, RIGHT - ctx.measureText(metaText).width, y + meta * 0.95);
+    y += meta * 1.15;
+    drawLine(ctx, segments(e), match, y + match * 0.88);
+    y += match * 1.05 + gap;
+  }
+  return canvas;
+}
+
+// ---------- gerar ----------
+const toBlob = canvas => new Promise(resolve => canvas.toBlob(resolve, "image/png"));
+let generated = [];
+
+document.getElementById("generate-form").addEventListener("submit", async ev => {
+  ev.preventDefault();
+  let start = document.getElementById("from").value, end = document.getElementById("to").value;
+  if (end < start) [start, end] = [end, start];
+  const btn = document.getElementById("generate-btn");
+  btn.disabled = true;
+  try {
+    const byDay = {};
+    for (const g of data.games) if (g.date >= start && g.date <= end) (byDay[g.date] ||= []).push(g);
+    for (const e of loadEvents()) if (e.date >= start && e.date <= end) (byDay[e.date] ||= []).push(e);
+    const days = Object.keys(byDay).sort();
+    generated.forEach(p => URL.revokeObjectURL(p.url));
+    generated = [];
+    for (const day of days) {
+      const entries = byDay[day].sort((a, b) => a.time.localeCompare(b.time));
+      const blob = await toBlob(drawPost(day, entries));
+      generated.push({ day, count: entries.length, url: URL.createObjectURL(blob), name: `agenda-${day}.png` });
+    }
+    renderPosts();
+    message(days.length ? `${days.length} posts gerados.` : "Não há jogos nem eventos nestes dias.");
+  } catch (err) {
+    message("Erro ao gerar: " + err.message, true);
+  } finally {
+    btn.disabled = false;
+  }
+});
+
+function renderPosts() {
+  const section = document.getElementById("results"), list = document.getElementById("posts");
+  section.hidden = generated.length === 0;
+  list.replaceChildren(...generated.map(p => {
+    const fig = document.createElement("figure");
+    fig.innerHTML = `<a target="_blank"><img alt=""></a><figcaption><span></span><a class="dl">Descarregar</a></figcaption>`;
+    fig.querySelector("a").href = p.url;
+    fig.querySelector("img").src = p.url;
+    fig.querySelector("img").alt = "Agenda " + dayLabel(p.day);
+    fig.querySelector("span").textContent = `${dayLabel(p.day)} · ${p.count} ${p.count === 1 ? "evento" : "eventos"}`;
+    const dl = fig.querySelector("a.dl"); dl.href = p.url; dl.download = p.name;
+    return fig;
+  }));
+}
+// Descarrega cada PNG em separado (com intervalo, para o browser não bloquear).
+document.getElementById("download-all").addEventListener("click", () => {
+  document.querySelectorAll("#posts a.dl").forEach((link, i) => setTimeout(() => link.click(), i * 400));
+});
+
+// ---------- arranque ----------
+(async function init() {
+  const today = new Date(), week = new Date(today); week.setDate(today.getDate() + 6);
+  document.getElementById("from").value = iso(today);
+  document.getElementById("to").value = iso(week);
+  renderEvents();
+  const btn = document.getElementById("generate-btn");
+  btn.disabled = true;
+  try {
+    const [json, background, logo] = await Promise.all([
+      fetch("games.json", { cache: "no-store" }).then(r => { if (!r.ok) throw new Error("games.json " + r.status); return r.json(); }),
+      loadImage("assets/background.png"), loadImage("assets/GCO.png"),
+      document.fonts.load("150px 'Bebas Neue'", "AGENDA SEMANAL ÁÉÍÓÚÃÕÇ"),
+      document.fonts.load("500 40px Oswald", "SÁBADO 0123456789 - Pav."),
+    ]);
+    data = json; images.background = background; images.logo = logo;
+    const updated = new Date(data.updated_at);
+    document.getElementById("updated").textContent =
+      `Jogos da FPB atualizados em ${pad2(updated.getDate())}/${pad2(updated.getMonth() + 1)}/${updated.getFullYear()} ${pad2(updated.getHours())}:${pad2(updated.getMinutes())} (atualiza automaticamente 2x por dia).`;
+    btn.disabled = false;
+  } catch (err) {
+    document.getElementById("updated").textContent = "";
+    message("Não foi possível carregar os jogos: " + err.message, true);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+name: Atualizar jogos FPB
+
+on:
+  schedule:
+    # 07:00 e 17:00 UTC (08:00 e 18:00 em Lisboa no horário de verão)
+    - cron: "0 7,17 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-games
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      # O ubuntu-latest já traz Firefox e GeckoDriver.
+      - run: python fetch_games.py
+      - name: Gravar alterações
+        run: |
+          if git diff --quiet -- games.json; then
+            echo "Sem alterações."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add games.json
+          git commit -m "Atualizar jogos FPB"
+          git push

@@ -1,0 +1,42 @@
+{
+  "timezone": "Europe/Lisbon",
+  "scraper": {
+    "club_id": 23,
+    "season": null,
+    "club_name_contains": [
+      "Ginásio",
+      "GCO"
+    ],
+    "only_home_games": true,
+    "headless": true,
+    "initial_wait_seconds": 3,
+    "scroll_wait_seconds": 2,
+    "max_scrolls": 50,
+    "fpb_url_template": "https://www.fpb.pt/calendario/clube_{club_id}/?clube={club_id}&epoca={season}&"
+  },
+  "agenda_post": {
+    "team_aliases": {
+      "ACDF / AC Performance": "FERRAGUDO",
+      "Sangalhos DC / CRB": "SANGALHOS",
+      "ASC/BVRM - Monsaraz": "MONSARAZ",
+      "CBA FCC EQ HOTELEIROS": "CBA",
+      "CF Os Bonjoanenses Faro": "BONJOANENSES",
+      "Os Bonjoanenses": "BONJOANENSES",
+      "IMORTAL AOC": "IMORTAL",
+      "Imortal New Sound": "IMORTAL",
+      "Académica Efapel": "ACADÉMICA",
+      "Illiabum Clube Margres": "ILLIABUM",
+      "Olivais FC": "OLIVAIS"
+    },
+    "venue_aliases": {
+      "Pavilhão do Ginásio Clube Olhanense": "Pav. GCO",
+      "Pavilhão do Sporting Clube Farense": "Pav. Farense",
+      "Complexo Desportivo de Sangalhos": "Complexo Desp. Sangalhos",
+      "Nave Desportiva de Ferragudo": "Nave Desp. Ferragudo",
+      "Pavilhão Municipal Francisco Neves - Imortal": "Pav. Francisco Neves",
+      "Pavilhão Escola Sec.Dra. Laura Ayres": "Pav. Esc. Laura Ayres",
+      "Pavilhão da Escola Secundária de Albufeira": "Pav. Esc. Sec. Albufeira",
+      "Pavilhão Municipal de Vila Real de Santo António": "Pav. VRSA"
+    }
+  }
+}

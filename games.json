@@ -1,0 +1,746 @@
+{
+ "updated_at": "2026-10-31T22:10+00:00",
+ "games": [
+  {
+   "date": "2026-10-31",
+   "time": "11:00",
+   "venue": "Pav. José de Sousa Pires",
+   "home": {
+    "text": "GAVIÕES",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "MINI12 F",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-10-31",
+   "time": "11:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "MINI12 M",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "FARENSE",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-10-31",
+   "time": "14:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB16 F",
+    "sponsor": "OPTICÁLIA"
+   },
+   "away": {
+    "text": "FARENSE A",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-10-31",
+   "time": "14:30",
+   "venue": "Pav. Farense",
+   "home": {
+    "text": "FARENSE B",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB18 M B",
+    "sponsor": "BIC"
+   }
+  },
+  {
+   "date": "2026-10-31",
+   "time": "16:00",
+   "venue": "Complexo Desp. Sangalhos",
+   "home": {
+    "text": "SANGALHOS",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "GINÁSIO",
+    "sponsor": "ANTRIX"
+   }
+  },
+  {
+   "date": "2026-10-31",
+   "time": "16:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "GINÁSIO",
+    "sponsor": "EXZELLENZ"
+   },
+   "away": {
+    "text": "BELENENSES",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-10-31",
+   "time": "18:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB16 M",
+    "sponsor": "JPO ALUMÍNIOS"
+   },
+   "away": {
+    "text": "FARENSE",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-01",
+   "time": "09:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB14 M",
+    "sponsor": "FARMÁCIA PROGRESSO"
+   },
+   "away": {
+    "text": "TUBARÕES A",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-01",
+   "time": "11:00",
+   "venue": "Nave Desp. Ferragudo",
+   "home": {
+    "text": "FERRAGUDO",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB18 M B",
+    "sponsor": "BIC"
+   }
+  },
+  {
+   "date": "2026-11-01",
+   "time": "11:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB14 F",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "PORTIMONENSE A",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-01",
+   "time": "16:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "GINÁSIO B",
+    "sponsor": "IBÉRICAFRIO"
+   },
+   "away": {
+    "text": "MONSARAZ",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-02",
+   "time": "21:00",
+   "venue": "Pav. Albufeira",
+   "home": {
+    "text": "IMORTAL",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "GINÁSIO B",
+    "sponsor": "IBÉRICAFRIO"
+   }
+  },
+  {
+   "date": "2026-11-05",
+   "time": "21:00",
+   "venue": "Pav. Esc. Sec. Albufeira",
+   "home": {
+    "text": "CBA",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB18 M B",
+    "sponsor": "BIC"
+   }
+  },
+  {
+   "date": "2026-11-05",
+   "time": "21:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB18 M A",
+    "sponsor": "BIC"
+   },
+   "away": {
+    "text": "IBC",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "time": "09:30",
+   "venue": "Pav. Farense",
+   "home": {
+    "text": "FARENSE",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB14 F",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "time": "11:30",
+   "venue": "Pav. Portimão",
+   "home": {
+    "text": "PORTIMONENSE",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "MINI12 F",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "time": "14:15",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB16 M",
+    "sponsor": "JPO ALUMÍNIOS"
+   },
+   "away": {
+    "text": "IMORTAL",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "time": "15:00",
+   "venue": "Pav. Penha",
+   "home": {
+    "text": "BONJOANENSES",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "MINI12 M",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "time": "16:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "GINÁSIO",
+    "sponsor": "ANTRIX"
+   },
+   "away": {
+    "text": "BENFICA B",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "time": "18:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "GINÁSIO",
+    "sponsor": "EXZELLENZ"
+   },
+   "away": {
+    "text": "PORTIMONENSE",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "time": "18:30",
+   "venue": "Pav. Farense",
+   "home": {
+    "text": "FARENSE A",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB14 M",
+    "sponsor": "FARMÁCIA PROGRESSO"
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "time": "19:00",
+   "venue": "Pav. Penha",
+   "home": {
+    "text": "BONJOANENSES",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB16 M B",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "time": "21:30",
+   "venue": "Pav. Boavista",
+   "home": {
+    "text": "PORTIMONENSE",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB16 F",
+    "sponsor": "OPTICÁLIA"
+   }
+  },
+  {
+   "date": "2026-11-08",
+   "time": "14:15",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB18 F",
+    "sponsor": "CLUBEHOUSEMEDIA"
+   },
+   "away": {
+    "text": "FARENSE",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-11",
+   "time": "21:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "GINÁSIO B",
+    "sponsor": "IBÉRICAFRIO"
+   },
+   "away": {
+    "text": "BONJOANENSES",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-14",
+   "time": "09:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "MINI12 M",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "TAVIRA",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-14",
+   "time": "11:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "MINI12 F",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "IMORTAL",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-14",
+   "time": "14:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB14 M",
+    "sponsor": "FARMÁCIA PROGRESSO"
+   },
+   "away": {
+    "text": "CBA",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-14",
+   "time": "15:00",
+   "venue": "Pav. Lombos",
+   "home": {
+    "text": "QUINTA DOS LOMBOS B",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "GINÁSIO",
+    "sponsor": "EXZELLENZ"
+   }
+  },
+  {
+   "date": "2026-11-14",
+   "time": "16:00",
+   "venue": "Pav. Capitão Adriano Nordeste",
+   "home": {
+    "text": "ILLIABUM",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "GINÁSIO",
+    "sponsor": "ANTRIX"
+   }
+  },
+  {
+   "date": "2026-11-14",
+   "time": "16:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB14 F",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "TUBARÕES",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-14",
+   "time": "18:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB16 F",
+    "sponsor": "OPTICÁLIA"
+   },
+   "away": {
+    "text": "IMORTAL",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-14",
+   "time": "20:45",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB18 M B",
+    "sponsor": "BIC"
+   },
+   "away": {
+    "text": "TAVIRA",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-15",
+   "time": "09:30",
+   "venue": "Pav. Penha",
+   "home": {
+    "text": "BONJOANENSES",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB14 F",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-15",
+   "time": "09:30",
+   "venue": "Pav. VRSA",
+   "home": {
+    "text": "JUVENTUDE",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB14 M",
+    "sponsor": "FARMÁCIA PROGRESSO"
+   }
+  },
+  {
+   "date": "2026-11-15",
+   "time": "11:30",
+   "venue": "Pav. VRSA",
+   "home": {
+    "text": "JUVENTUDE",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB18 F",
+    "sponsor": "CLUBEHOUSEMEDIA"
+   }
+  },
+  {
+   "date": "2026-11-15",
+   "time": "15:00",
+   "venue": "Pav. Esc. Sec. Albufeira",
+   "home": {
+    "text": "CBA",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB16 M",
+    "sponsor": "JPO ALUMÍNIOS"
+   }
+  },
+  {
+   "date": "2026-11-15",
+   "time": "16:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB16 M B",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "TAVIRA A",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-15",
+   "time": "16:30",
+   "venue": "Pav. Farense",
+   "home": {
+    "text": "FARENSE A",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB18 M A",
+    "sponsor": "BIC"
+   }
+  },
+  {
+   "date": "2026-11-19",
+   "time": "21:30",
+   "venue": "Pav. Esc. Laura Ayres",
+   "home": {
+    "text": "TUBARÕES",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "GINÁSIO B",
+    "sponsor": "IBÉRICAFRIO"
+   }
+  },
+  {
+   "date": "2026-11-21",
+   "time": "09:30",
+   "venue": "Pav. Farense",
+   "home": {
+    "text": "FARENSE",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB16 M",
+    "sponsor": "JPO ALUMÍNIOS"
+   }
+  },
+  {
+   "date": "2026-11-21",
+   "time": "14:15",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB16 M B",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "GAVIÕES",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-21",
+   "time": "16:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "GINÁSIO",
+    "sponsor": "ANTRIX"
+   },
+   "away": {
+    "text": "ACADÉMICA",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-21",
+   "time": "18:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "GINÁSIO",
+    "sponsor": "EXZELLENZ"
+   },
+   "away": {
+    "text": "SIMECQ",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-22",
+   "time": "11:00",
+   "venue": "Pav. Esc. Sec. Albufeira",
+   "home": {
+    "text": "CBA",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "MINI12 M",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-22",
+   "time": "14:30",
+   "venue": "Pav. Francisco Neves",
+   "home": {
+    "text": "IMORTAL",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB18 F",
+    "sponsor": "CLUBEHOUSEMEDIA"
+   }
+  },
+  {
+   "date": "2026-11-22",
+   "time": "16:30",
+   "venue": "Pav. Boavista",
+   "home": {
+    "text": "PORTIMONENSE A",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB18 M A",
+    "sponsor": "BIC"
+   }
+  },
+  {
+   "date": "2026-11-22",
+   "time": "16:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB18 M B",
+    "sponsor": "BIC"
+   },
+   "away": {
+    "text": "JUVENTUDE",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-27",
+   "time": "21:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "GINÁSIO B",
+    "sponsor": "IBÉRICAFRIO"
+   },
+   "away": {
+    "text": "FERRAGUDO",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-28",
+   "time": "09:30",
+   "venue": "Pav. Penha",
+   "home": {
+    "text": "BONJOANENSES",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "MINI12 F",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-28",
+   "time": "11:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "MINI12 M",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "PORTIMONENSE A",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-28",
+   "time": "15:00",
+   "venue": "Pav. Comp. Desp. João Carlos Cifuentes",
+   "home": {
+    "text": "QUELUZ",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "GINÁSIO",
+    "sponsor": "ANTRIX"
+   }
+  },
+  {
+   "date": "2026-11-28",
+   "time": "16:30",
+   "venue": "Pav. Engº Augusto Correia",
+   "home": {
+    "text": "OLIVAIS",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "GINÁSIO",
+    "sponsor": "EXZELLENZ"
+   }
+  },
+  {
+   "date": "2026-11-29",
+   "time": "09:30",
+   "venue": "Pav. Penha",
+   "home": {
+    "text": "BONJOANENSES",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB14 M",
+    "sponsor": "FARMÁCIA PROGRESSO"
+   }
+  },
+  {
+   "date": "2026-11-29",
+   "time": "11:30",
+   "venue": "Pav. Beja",
+   "home": {
+    "text": "BEJA",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB14 F",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-29",
+   "time": "11:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB18 F",
+    "sponsor": "CLUBEHOUSEMEDIA"
+   },
+   "away": {
+    "text": "TAVIRA",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-11-29",
+   "time": "17:00",
+   "venue": "Pav. Boavista",
+   "home": {
+    "text": "PORTIMONENSE B",
+    "sponsor": ""
+   },
+   "away": {
+    "text": "SUB18 M B",
+    "sponsor": "BIC"
+   }
+  }
+ ]
+}
