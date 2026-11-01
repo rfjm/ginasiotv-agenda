@@ -1,97 +1,6 @@
 {
- "updated_at": "2026-10-31T22:24+00:00",
+ "updated_at": "2026-11-01T13:57+00:00",
  "games": [
-  {
-   "date": "2026-10-31",
-   "time": "11:00",
-   "venue": "Pav. José de Sousa Pires",
-   "home": {
-    "text": "GAVIÕES",
-    "sponsor": ""
-   },
-   "away": {
-    "text": "MINI12 F",
-    "sponsor": ""
-   }
-  },
-  {
-   "date": "2026-10-31",
-   "time": "11:30",
-   "venue": "Pav. GCO",
-   "home": {
-    "text": "MINI12 M",
-    "sponsor": ""
-   },
-   "away": {
-    "text": "FARENSE",
-    "sponsor": ""
-   }
-  },
-  {
-   "date": "2026-10-31",
-   "time": "14:30",
-   "venue": "Pav. GCO",
-   "home": {
-    "text": "SUB16 F",
-    "sponsor": "OPTICÁLIA"
-   },
-   "away": {
-    "text": "FARENSE A",
-    "sponsor": ""
-   }
-  },
-  {
-   "date": "2026-10-31",
-   "time": "14:30",
-   "venue": "Pav. Farense",
-   "home": {
-    "text": "FARENSE B",
-    "sponsor": ""
-   },
-   "away": {
-    "text": "SUB18 M B",
-    "sponsor": "BIC"
-   }
-  },
-  {
-   "date": "2026-10-31",
-   "time": "16:00",
-   "venue": "Complexo Desp. Sangalhos",
-   "home": {
-    "text": "SANGALHOS",
-    "sponsor": ""
-   },
-   "away": {
-    "text": "GINÁSIO",
-    "sponsor": "ANTRIX"
-   }
-  },
-  {
-   "date": "2026-10-31",
-   "time": "16:30",
-   "venue": "Pav. GCO",
-   "home": {
-    "text": "GINÁSIO",
-    "sponsor": "EXZELLENZ"
-   },
-   "away": {
-    "text": "BELENENSES",
-    "sponsor": ""
-   }
-  },
-  {
-   "date": "2026-10-31",
-   "time": "18:30",
-   "venue": "Pav. GCO",
-   "home": {
-    "text": "SUB16 M",
-    "sponsor": "JPO ALUMÍNIOS"
-   },
-   "away": {
-    "text": "FARENSE",
-    "sponsor": ""
-   }
-  },
   {
    "date": "2026-11-01",
    "time": "09:30",
@@ -740,6 +649,45 @@
    "away": {
     "text": "SUB18 M B",
     "sponsor": "BIC"
+   }
+  },
+  {
+   "date": "2026-12-01",
+   "time": "14:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB18 F",
+    "sponsor": "CLUBEHOUSEMEDIA"
+   },
+   "away": {
+    "text": "IMORTAL",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-12-01",
+   "time": "16:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB14 M",
+    "sponsor": "FARMÁCIA PROGRESSO"
+   },
+   "away": {
+    "text": "PORTIMONENSE A",
+    "sponsor": ""
+   }
+  },
+  {
+   "date": "2026-12-01",
+   "time": "18:30",
+   "venue": "Pav. GCO",
+   "home": {
+    "text": "SUB18 M A",
+    "sponsor": "BIC"
+   },
+   "away": {
+    "text": "BONJOANENSES",
+    "sponsor": ""
    }
   }
  ]
