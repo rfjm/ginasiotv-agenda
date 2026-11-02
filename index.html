@@ -24,6 +24,9 @@
   button { font: inherit; font-weight: 600; background: var(--green); color: #fff; border: 0; border-radius: 6px; padding: 9px 16px; cursor: pointer; }
   button:disabled { opacity: .5; cursor: default; }
   button.link { background: none; color: #b3261e; padding: 4px 8px; font-weight: 500; }
+  button.secondary { background: none; color: var(--green); border: 1px solid var(--green); }
+  h3 { margin: 16px 0 6px; font-size: 14px; color: var(--text); }
+  .hint a { color: var(--green); }
   .hint { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
   .msg { padding: 10px 12px; border-radius: 6px; background: #eef7ef; color: var(--green); }
   .msg.err { background: #fdecea; color: #b3261e; }
@@ -82,6 +85,23 @@
         <button type="submit">Adicionar</button>
       </div>
     </form>
+  </section>
+
+  <section>
+    <div class="row" style="justify-content: space-between;">
+      <h2 style="margin:0">Nomes abreviados</h2>
+      <button type="button" class="secondary" id="aliases-toggle" aria-expanded="false" aria-controls="aliases">Mostrar lista</button>
+    </div>
+    <div id="aliases" hidden>
+      <p class="hint">Nomes da FPB que aparecem no post de outra forma. Os restantes são abreviados automaticamente
+        (ex.: "SC Farense" → FARENSE). Para alterar, edita
+        <a href="https://github.com/rfjm/ginasiotv-agenda/edit/main/agenda_config.json" target="_blank" rel="noopener">agenda_config.json</a>
+        no GitHub e depois corre <a href="https://github.com/rfjm/ginasiotv-agenda/actions/workflows/update-games.yml" target="_blank" rel="noopener">Atualizar jogos FPB</a>.</p>
+      <h3>Adversários</h3>
+      <div class="table-wrap"><table id="team-aliases"><thead><tr><th>Nome na FPB</th><th>No post</th></tr></thead><tbody></tbody></table></div>
+      <h3>Pavilhões</h3>
+      <div class="table-wrap"><table id="venue-aliases"><thead><tr><th>Nome na FPB</th><th>No post</th></tr></thead><tbody></tbody></table></div>
+    </div>
   </section>
 </main>
 
@@ -301,6 +321,32 @@ function renderPosts() {
 // Descarrega cada PNG em separado (com intervalo, para o browser não bloquear).
 document.getElementById("download-all").addEventListener("click", () => {
   document.querySelectorAll("#posts a.dl").forEach((link, i) => setTimeout(() => link.click(), i * 400));
+});
+
+// ---------- nomes abreviados (lidos de agenda_config.json ao abrir) ----------
+let aliasesLoaded = false;
+function fillAliasTable(id, aliases) {
+  const rows = Object.entries(aliases || {}).sort(([a], [b]) => a.localeCompare(b, "pt"));
+  document.querySelector(`#${id} tbody`).replaceChildren(...rows.map(([from, to]) => {
+    const tr = document.createElement("tr");
+    for (const value of [from, to]) { const td = document.createElement("td"); td.textContent = value; tr.append(td); }
+    return tr;
+  }));
+}
+document.getElementById("aliases-toggle").addEventListener("click", async ev => {
+  const btn = ev.currentTarget, panel = document.getElementById("aliases"), open = panel.hidden;
+  panel.hidden = !open;
+  btn.textContent = open ? "Esconder lista" : "Mostrar lista";
+  btn.setAttribute("aria-expanded", String(open));
+  if (!open || aliasesLoaded) return;
+  try {
+    const config = await fetch("agenda_config.json", { cache: "no-store" }).then(r => r.json());
+    fillAliasTable("team-aliases", config.agenda_post?.team_aliases);
+    fillAliasTable("venue-aliases", config.agenda_post?.venue_aliases);
+    aliasesLoaded = true;
+  } catch (err) {
+    message("Não foi possível carregar os nomes abreviados: " + err.message, true);
+  }
 });
 
 // ---------- arranque ----------
