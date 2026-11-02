@@ -124,8 +124,15 @@ function message(text, error = false) {
   const el = document.getElementById("message");
   el.textContent = text; el.classList.toggle("err", error);
 }
-function loadImage(src) {
-  return new Promise((resolve, reject) => { const img = new Image(); img.onload = () => resolve(img); img.onerror = reject; img.src = src; });
+// Tenta duas vezes (a segunda sem cache); o erro de imagem não traz mensagem, por isso indica o ficheiro.
+function loadImage(src, retry = true) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => retry ? loadImage(`${src}?v=${Date.now()}`, false).then(resolve, reject)
+                              : reject(new Error(`não foi possível abrir a imagem ${src.split("?")[0]}`));
+    img.src = src;
+  });
 }
 
 // ---------- eventos manuais (guardados no browser) ----------
@@ -358,11 +365,16 @@ document.getElementById("aliases-toggle").addEventListener("click", async ev => 
   const btn = document.getElementById("generate-btn");
   btn.disabled = true;
   try {
-    const [json, background, logo] = await Promise.all([
-      fetch("games.json", { cache: "no-store" }).then(r => { if (!r.ok) throw new Error("games.json " + r.status); return r.json(); }),
-      loadImage("assets/background.png"), loadImage("assets/GCO.png"),
+    // As fontes vêm do Google Fonts; se falharem, os posts saem com a fonte do sistema em vez de dar erro.
+    const fonts = Promise.all([
       document.fonts.load("150px 'Bebas Neue'", "AGENDA SEMANAL ÁÉÍÓÚÃÕÇ"),
       document.fonts.load("500 40px Oswald", "SÁBADO 0123456789 - Pav."),
+    ]).catch(() => message("Aviso: as fontes não carregaram; os posts podem ficar com outro tipo de letra.", true));
+    const [json, background, logo] = await Promise.all([
+      fetch("games.json", { cache: "no-store" })
+        .then(r => { if (!r.ok) throw new Error(`games.json respondeu ${r.status}`); return r.json(); })
+        .catch(err => { throw new Error(location.protocol === "file:" ? "abre a página pelo link do GitHub Pages, não pelo ficheiro" : err.message); }),
+      loadImage("assets/background.png"), loadImage("assets/GCO.png"), fonts,
     ]);
     data = json; images.background = background; images.logo = logo;
     const updated = new Date(data.updated_at);
@@ -371,7 +383,7 @@ document.getElementById("aliases-toggle").addEventListener("click", async ev => 
     btn.disabled = false;
   } catch (err) {
     document.getElementById("updated").textContent = "";
-    message("Não foi possível carregar os jogos: " + err.message, true);
+    message(`Não foi possível carregar os jogos: ${err?.message || err}. Recarrega a página (Ctrl+F5).`, true);
   }
 })();
 </script>
