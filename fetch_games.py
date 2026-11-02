@@ -26,11 +26,13 @@ def to_json(games: list[ScrapedGame], config: dict) -> dict:
     for game in sorted(games, key=lambda g: (g.date, g.time)):
         home, home_sponsor = team_parts(game.home_team, game, names, post_cfg)
         away, away_sponsor = team_parts(game.away_team, game, names, post_cfg)
+        # `raw`/`venue_raw`: nomes originais da FPB, para a página aplicar nomes abreviados do browser.
         items.append({
             "date": game.date, "time": game.time,
             "venue": short_venue(game.venue, post_cfg.get("venue_aliases", {})) if game.venue else "",
-            "home": {"text": home, "sponsor": home_sponsor},
-            "away": {"text": away, "sponsor": away_sponsor},
+            "venue_raw": game.venue.split(",")[0].strip(),
+            "home": {"text": home, "sponsor": home_sponsor, "raw": " ".join(game.home_team.split())},
+            "away": {"text": away, "sponsor": away_sponsor, "raw": " ".join(game.away_team.split())},
         })
     timezone = ZoneInfo(config.get("timezone", "Europe/Lisbon"))
     return {"updated_at": datetime.now(timezone).isoformat(timespec="minutes"), "games": items}

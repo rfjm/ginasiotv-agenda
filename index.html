@@ -18,7 +18,7 @@
   section { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
   h2 { margin: 0 0 12px; font-size: 17px; color: var(--green); }
   label { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
-  input { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; color: var(--text); max-width: 100%; }
+  input, select { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; color: var(--text); max-width: 100%; }
   .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
   .grow { flex: 1 1 220px; }
   button { font: inherit; font-weight: 600; background: var(--green); color: #fff; border: 0; border-radius: 6px; padding: 9px 16px; cursor: pointer; }
@@ -94,13 +94,28 @@
     </div>
     <div id="aliases" hidden>
       <p class="hint">Nomes da FPB que aparecem no post de outra forma. Os restantes são abreviados automaticamente
-        (ex.: "SC Farense" → FARENSE). Para alterar, edita
+        (ex.: "SC Farense" → FARENSE). Os que adicionares aqui ficam guardados <b>neste browser</b> e
+        têm prioridade. Para valerem em todos os computadores, edita
         <a href="https://github.com/rfjm/ginasiotv-agenda/edit/main/agenda_config.json" target="_blank" rel="noopener">agenda_config.json</a>
         no GitHub e depois corre <a href="https://github.com/rfjm/ginasiotv-agenda/actions/workflows/update-games.yml" target="_blank" rel="noopener">Atualizar jogos FPB</a>.</p>
+      <form id="alias-form" style="margin-top: 14px;">
+        <div class="row">
+          <label>Tipo
+            <select name="kind" id="alias-kind">
+              <option value="teams">Adversário</option>
+              <option value="venues">Pavilhão</option>
+            </select>
+          </label>
+          <label class="grow">Nome na FPB <input type="text" name="from" list="alias-names" placeholder="Escolhe ou escreve o nome exato" required></label>
+          <label class="grow">No post <input type="text" name="to" placeholder="FERRAGUDO" required></label>
+          <button type="submit">Adicionar</button>
+        </div>
+        <datalist id="alias-names"></datalist>
+      </form>
       <h3>Adversários</h3>
-      <div class="table-wrap"><table id="team-aliases"><thead><tr><th>Nome na FPB</th><th>No post</th></tr></thead><tbody></tbody></table></div>
+      <div class="table-wrap"><table id="team-aliases"><thead><tr><th>Nome na FPB</th><th>No post</th><th>Origem</th><th></th></tr></thead><tbody></tbody></table></div>
       <h3>Pavilhões</h3>
-      <div class="table-wrap"><table id="venue-aliases"><thead><tr><th>Nome na FPB</th><th>No post</th></tr></thead><tbody></tbody></table></div>
+      <div class="table-wrap"><table id="venue-aliases"><thead><tr><th>Nome na FPB</th><th>No post</th><th>Origem</th><th></th></tr></thead><tbody></tbody></table></div>
     </div>
   </section>
 </main>
@@ -292,7 +307,7 @@ document.getElementById("generate-form").addEventListener("submit", async ev => 
   btn.disabled = true;
   try {
     const byDay = {};
-    for (const g of data.games) if (g.date >= start && g.date <= end) (byDay[g.date] ||= []).push(g);
+    for (const g of data.games) if (g.date >= start && g.date <= end) (byDay[g.date] ||= []).push(applyAliases(g));
     for (const e of loadEvents()) if (e.date >= start && e.date <= end) (byDay[e.date] ||= []).push(e);
     const days = Object.keys(byDay).sort();
     generated.forEach(p => URL.revokeObjectURL(p.url));
@@ -330,27 +345,86 @@ document.getElementById("download-all").addEventListener("click", () => {
   document.querySelectorAll("#posts a.dl").forEach((link, i) => setTimeout(() => link.click(), i * 400));
 });
 
-// ---------- nomes abreviados (lidos de agenda_config.json ao abrir) ----------
-let aliasesLoaded = false;
-function fillAliasTable(id, aliases) {
-  const rows = Object.entries(aliases || {}).sort(([a], [b]) => a.localeCompare(b, "pt"));
-  document.querySelector(`#${id} tbody`).replaceChildren(...rows.map(([from, to]) => {
+// ---------- nomes abreviados ----------
+// Partilhados: agenda_config.json (já aplicados em games.json). Locais: guardados neste browser,
+// aplicados ao gerar sobre os nomes originais da FPB (`raw` / `venue_raw`).
+const ALIASES_KEY = "ginasiotv-agenda-aliases";
+let sharedAliases = null;
+function loadLocalAliases() {
+  try { const a = JSON.parse(localStorage.getItem(ALIASES_KEY) || "{}"); return { teams: a.teams || {}, venues: a.venues || {} }; }
+  catch { return { teams: {}, venues: {} }; }
+}
+function saveLocalAliases(aliases) {
+  try { localStorage.setItem(ALIASES_KEY, JSON.stringify(aliases)); } catch { message("Não foi possível guardar o nome neste browser.", true); }
+  renderAliases();
+}
+function applyAliases(game) {
+  if (game.text) return game;  // evento manual
+  const local = loadLocalAliases();
+  const team = t => t.raw && local.teams[t.raw] ? { ...t, text: local.teams[t.raw], sponsor: "" } : t;
+  const venue = game.venue_raw && local.venues[game.venue_raw] ? local.venues[game.venue_raw] : game.venue;
+  return { ...game, home: team(game.home), away: team(game.away), venue };
+}
+function fillAliasTable(id, kind, shared) {
+  const local = loadLocalAliases()[kind];
+  const rows = new Map(Object.entries(shared || {}).map(([from, to]) => [from, { to, local: false }]));
+  for (const [from, to] of Object.entries(local)) rows.set(from, { to, local: true });
+  const sorted = [...rows].sort(([a], [b]) => a.localeCompare(b, "pt"));
+  document.querySelector(`#${id} tbody`).replaceChildren(...sorted.map(([from, { to, local: isLocal }]) => {
     const tr = document.createElement("tr");
-    for (const value of [from, to]) { const td = document.createElement("td"); td.textContent = value; tr.append(td); }
+    for (const value of [from, to, isLocal ? "Neste browser" : "Todos"]) {
+      const td = document.createElement("td"); td.textContent = value; tr.append(td);
+    }
+    const td = document.createElement("td");
+    if (isLocal) {
+      const btn = document.createElement("button");
+      btn.className = "link"; btn.type = "button"; btn.textContent = "Remover";
+      btn.onclick = () => { const a = loadLocalAliases(); delete a[kind][from]; saveLocalAliases(a); };
+      td.append(btn);
+    }
+    tr.append(td);
     return tr;
   }));
 }
+function renderAliases() {
+  if (!sharedAliases) return;
+  fillAliasTable("team-aliases", "teams", sharedAliases.team_aliases);
+  fillAliasTable("venue-aliases", "venues", sharedAliases.venue_aliases);
+}
+// Sugestões do campo "Nome na FPB": nomes originais presentes nos jogos.
+function fillAliasSuggestions() {
+  const kind = document.getElementById("alias-kind").value, names = new Set();
+  for (const g of data.games) {
+    if (kind === "venues") { if (g.venue_raw) names.add(g.venue_raw); }
+    else for (const t of [g.home, g.away]) if (t.raw && !t.sponsor && !/^(SUB|MINI|GINÁSIO)/.test(t.text)) names.add(t.raw);
+  }
+  document.getElementById("alias-names").replaceChildren(...[...names].sort((a, b) => a.localeCompare(b, "pt")).map(n => {
+    const option = document.createElement("option"); option.value = n; return option;
+  }));
+}
+document.getElementById("alias-kind").addEventListener("change", fillAliasSuggestions);
+document.getElementById("alias-form").addEventListener("submit", ev => {
+  ev.preventDefault();
+  const f = ev.target, kind = f.kind.value;
+  const from = f.from.value.trim().replace(/\s+/g, " "), to = f.to.value.trim().replace(/\s+/g, " ");
+  if (!from || !to) return;
+  const aliases = loadLocalAliases();
+  aliases[kind][from] = kind === "teams" ? to.toUpperCase() : to;
+  saveLocalAliases(aliases);
+  f.from.value = ""; f.to.value = "";
+  message(`Nome guardado: "${from}" → "${aliases[kind][from]}". Volta a gerar os posts para o aplicar.`);
+});
 document.getElementById("aliases-toggle").addEventListener("click", async ev => {
   const btn = ev.currentTarget, panel = document.getElementById("aliases"), open = panel.hidden;
   panel.hidden = !open;
   btn.textContent = open ? "Esconder lista" : "Mostrar lista";
   btn.setAttribute("aria-expanded", String(open));
-  if (!open || aliasesLoaded) return;
+  if (!open || sharedAliases) return;
+  fillAliasSuggestions();
   try {
     const config = await fetch("agenda_config.json", { cache: "no-store" }).then(r => r.json());
-    fillAliasTable("team-aliases", config.agenda_post?.team_aliases);
-    fillAliasTable("venue-aliases", config.agenda_post?.venue_aliases);
-    aliasesLoaded = true;
+    sharedAliases = config.agenda_post || {};
+    renderAliases();
   } catch (err) {
     message("Não foi possível carregar os nomes abreviados: " + err.message, true);
   }
