@@ -1,693 +1,788 @@
 {
- "updated_at": "2026-11-01T20:56+00:00",
+ "updated_at": "2026-11-02T12:05+00:00",
  "games": [
-  {
-   "date": "2026-11-01",
-   "time": "09:30",
-   "venue": "Pav. GCO",
-   "home": {
-    "text": "SUB14 M",
-    "sponsor": "FARMÁCIA PROGRESSO"
-   },
-   "away": {
-    "text": "TUBARÕES A",
-    "sponsor": ""
-   }
-  },
-  {
-   "date": "2026-11-01",
-   "time": "11:00",
-   "venue": "Nave Desp. Ferragudo",
-   "home": {
-    "text": "FERRAGUDO",
-    "sponsor": ""
-   },
-   "away": {
-    "text": "SUB18 M B",
-    "sponsor": "BIC"
-   }
-  },
-  {
-   "date": "2026-11-01",
-   "time": "11:30",
-   "venue": "Pav. GCO",
-   "home": {
-    "text": "SUB14 F",
-    "sponsor": ""
-   },
-   "away": {
-    "text": "PORTIMONENSE A",
-    "sponsor": ""
-   }
-  },
-  {
-   "date": "2026-11-01",
-   "time": "16:30",
-   "venue": "Pav. GCO",
-   "home": {
-    "text": "GINÁSIO B",
-    "sponsor": "IBÉRICAFRIO"
-   },
-   "away": {
-    "text": "MONSARAZ",
-    "sponsor": ""
-   }
-  },
   {
    "date": "2026-11-02",
    "time": "21:00",
    "venue": "Pav. Albufeira",
+   "venue_raw": "Pavilhão Desportivo de Albufeira",
    "home": {
     "text": "IMORTAL",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Imortal PNEU RÁPIDO"
    },
    "away": {
     "text": "GINÁSIO B",
-    "sponsor": "IBÉRICAFRIO"
+    "sponsor": "IBÉRICAFRIO",
+    "raw": "Ginásio B IBÉRICAFRIO"
    }
   },
   {
    "date": "2026-11-05",
    "time": "21:00",
    "venue": "Pav. Esc. Sec. Albufeira",
+   "venue_raw": "Pavilhão da Escola Secundária de Albufeira",
    "home": {
     "text": "CBA",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "CBA"
    },
    "away": {
     "text": "SUB18 M B",
-    "sponsor": "BIC"
+    "sponsor": "BIC",
+    "raw": "Ginásio \"BIC\" B"
    }
   },
   {
    "date": "2026-11-05",
    "time": "21:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB18 M A",
-    "sponsor": "BIC"
+    "sponsor": "BIC",
+    "raw": "Ginásio \"BIC\" A"
    },
    "away": {
     "text": "IBC",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "IBC L37BUILDING SERVICES"
    }
   },
   {
    "date": "2026-11-07",
    "time": "09:30",
    "venue": "Pav. Farense",
+   "venue_raw": "Pavilhão do Sporting Clube Farense",
    "home": {
     "text": "FARENSE",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "SC Farense"
    },
    "away": {
     "text": "SUB14 F",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O."
    }
   },
   {
    "date": "2026-11-07",
    "time": "11:30",
    "venue": "Pav. Portimão",
+   "venue_raw": "Pavilhão Gimnodesportivo de Portimão",
    "home": {
     "text": "PORTIMONENSE",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Portimonense SC"
    },
    "away": {
     "text": "MINI12 F",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O."
    }
   },
   {
    "date": "2026-11-07",
    "time": "14:15",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB16 M",
-    "sponsor": "JPO ALUMÍNIOS"
+    "sponsor": "JPO ALUMÍNIOS",
+    "raw": "Ginásio \"JPO ALUMÍNIOS\""
    },
    "away": {
     "text": "IMORTAL",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Imortal CAFÉ OCEANO"
    }
   },
   {
    "date": "2026-11-07",
    "time": "15:00",
    "venue": "Pav. Penha",
+   "venue_raw": "Pavilhão Municipal da Penha",
    "home": {
     "text": "BONJOANENSES",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Os Bonjoanenses"
    },
    "away": {
     "text": "MINI12 M",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O."
    }
   },
   {
    "date": "2026-11-07",
    "time": "16:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "GINÁSIO",
-    "sponsor": "ANTRIX"
+    "sponsor": "ANTRIX",
+    "raw": "Ginásio ANTRIX"
    },
    "away": {
     "text": "BENFICA B",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "SL Benfica B"
    }
   },
   {
    "date": "2026-11-07",
    "time": "18:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "GINÁSIO",
-    "sponsor": "EXZELLENZ"
+    "sponsor": "EXZELLENZ",
+    "raw": "Ginásio EXZELLENZ"
    },
    "away": {
     "text": "PORTIMONENSE",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Portimonense SC"
    }
   },
   {
    "date": "2026-11-07",
    "time": "18:30",
    "venue": "Pav. Farense",
+   "venue_raw": "Pavilhão do Sporting Clube Farense",
    "home": {
     "text": "FARENSE A",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "SC Farense \"A\""
    },
    "away": {
     "text": "SUB14 M",
-    "sponsor": "FARMÁCIA PROGRESSO"
+    "sponsor": "FARMÁCIA PROGRESSO",
+    "raw": "GCO \"FARMÁCIA PROGRESSO\""
    }
   },
   {
    "date": "2026-11-07",
    "time": "19:00",
    "venue": "Pav. Penha",
+   "venue_raw": "Pavilhão Municipal da Penha",
    "home": {
     "text": "BONJOANENSES",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Os Bonjoanenses"
    },
    "away": {
     "text": "SUB16 M B",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O. \"B\""
    }
   },
   {
    "date": "2026-11-07",
    "time": "21:30",
    "venue": "Pav. Boavista",
+   "venue_raw": "Pavilhão Desportivo da Boavista",
    "home": {
     "text": "PORTIMONENSE",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Portimonense SC"
    },
    "away": {
     "text": "SUB16 F",
-    "sponsor": "OPTICÁLIA"
+    "sponsor": "OPTICÁLIA",
+    "raw": "Ginásio \"OPTICÁLIA\""
    }
   },
   {
    "date": "2026-11-08",
    "time": "14:15",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB18 F",
-    "sponsor": "CLUBEHOUSEMEDIA"
+    "sponsor": "CLUBEHOUSEMEDIA",
+    "raw": "Ginásio \"CLUBEHOUSEMEDIA\""
    },
    "away": {
     "text": "FARENSE",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "SC Farense"
    }
   },
   {
    "date": "2026-11-11",
    "time": "21:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "GINÁSIO B",
-    "sponsor": "IBÉRICAFRIO"
+    "sponsor": "IBÉRICAFRIO",
+    "raw": "Ginásio B IBÉRICAFRIO"
    },
    "away": {
     "text": "BONJOANENSES",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "CF Os Bonjoanenses Faro"
    }
   },
   {
    "date": "2026-11-14",
    "time": "09:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "MINI12 M",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O."
    },
    "away": {
     "text": "TAVIRA",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "CB Tavira"
    }
   },
   {
    "date": "2026-11-14",
    "time": "11:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "MINI12 F",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O."
    },
    "away": {
     "text": "IMORTAL",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "IMORTAL AOC"
    }
   },
   {
    "date": "2026-11-14",
    "time": "14:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB14 M",
-    "sponsor": "FARMÁCIA PROGRESSO"
+    "sponsor": "FARMÁCIA PROGRESSO",
+    "raw": "GCO \"FARMÁCIA PROGRESSO\""
    },
    "away": {
     "text": "CBA",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "CBA"
    }
   },
   {
    "date": "2026-11-14",
    "time": "15:00",
    "venue": "Pav. Lombos",
+   "venue_raw": "Pavilhão Desportivo dos Lombos",
    "home": {
     "text": "QUINTA DOS LOMBOS B",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Quinta dos Lombos B"
    },
    "away": {
     "text": "GINÁSIO",
-    "sponsor": "EXZELLENZ"
+    "sponsor": "EXZELLENZ",
+    "raw": "Ginásio EXZELLENZ"
    }
   },
   {
    "date": "2026-11-14",
    "time": "16:00",
    "venue": "Pav. Capitão Adriano Nordeste",
+   "venue_raw": "Pavilhão Municipal Capitão Adriano Nordeste",
    "home": {
     "text": "ILLIABUM",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Illiabum Clube Margres"
    },
    "away": {
     "text": "GINÁSIO",
-    "sponsor": "ANTRIX"
+    "sponsor": "ANTRIX",
+    "raw": "Ginásio ANTRIX"
    }
   },
   {
    "date": "2026-11-14",
    "time": "16:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB14 F",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O."
    },
    "away": {
     "text": "TUBARÕES",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "CBQ Tubarões"
    }
   },
   {
    "date": "2026-11-14",
    "time": "18:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB16 F",
-    "sponsor": "OPTICÁLIA"
+    "sponsor": "OPTICÁLIA",
+    "raw": "Ginásio \"OPTICÁLIA\""
    },
    "away": {
     "text": "IMORTAL",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Imortal New Sound"
    }
   },
   {
    "date": "2026-11-14",
    "time": "20:45",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB18 M B",
-    "sponsor": "BIC"
+    "sponsor": "BIC",
+    "raw": "Ginásio \"BIC\" B"
    },
    "away": {
     "text": "TAVIRA",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "CB Tavira"
    }
   },
   {
    "date": "2026-11-15",
    "time": "09:30",
    "venue": "Pav. Penha",
+   "venue_raw": "Pavilhão Municipal da Penha",
    "home": {
     "text": "BONJOANENSES",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Os Bonjoanenses"
    },
    "away": {
     "text": "SUB14 F",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O."
    }
   },
   {
    "date": "2026-11-15",
    "time": "09:30",
    "venue": "Pav. VRSA",
+   "venue_raw": "Pavilhão Municipal de Vila Real de Santo António",
    "home": {
     "text": "JUVENTUDE",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Juventude BC"
    },
    "away": {
     "text": "SUB14 M",
-    "sponsor": "FARMÁCIA PROGRESSO"
+    "sponsor": "FARMÁCIA PROGRESSO",
+    "raw": "GCO \"FARMÁCIA PROGRESSO\""
    }
   },
   {
    "date": "2026-11-15",
    "time": "11:30",
    "venue": "Pav. VRSA",
+   "venue_raw": "Pavilhão Municipal de Vila Real de Santo António",
    "home": {
     "text": "JUVENTUDE",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Juventude BC"
    },
    "away": {
     "text": "SUB18 F",
-    "sponsor": "CLUBEHOUSEMEDIA"
+    "sponsor": "CLUBEHOUSEMEDIA",
+    "raw": "Ginásio \"CLUBEHOUSEMEDIA\""
    }
   },
   {
    "date": "2026-11-15",
    "time": "15:00",
    "venue": "Pav. Esc. Sec. Albufeira",
+   "venue_raw": "Pavilhão da Escola Secundária de Albufeira",
    "home": {
     "text": "CBA",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "CBA"
    },
    "away": {
     "text": "SUB16 M",
-    "sponsor": "JPO ALUMÍNIOS"
+    "sponsor": "JPO ALUMÍNIOS",
+    "raw": "Ginásio \"JPO ALUMÍNIOS\""
    }
   },
   {
    "date": "2026-11-15",
    "time": "16:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB16 M B",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O. \"B\""
    },
    "away": {
     "text": "TAVIRA A",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "CB Tavira \"A\""
    }
   },
   {
    "date": "2026-11-15",
    "time": "16:30",
    "venue": "Pav. Farense",
+   "venue_raw": "Pavilhão do Sporting Clube Farense",
    "home": {
     "text": "FARENSE A",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "SC Farense \"A\""
    },
    "away": {
     "text": "SUB18 M A",
-    "sponsor": "BIC"
+    "sponsor": "BIC",
+    "raw": "Ginásio \"BIC\" A"
    }
   },
   {
    "date": "2026-11-19",
    "time": "21:30",
    "venue": "Pav. Esc. Laura Ayres",
+   "venue_raw": "Pavilhão Escola Sec.Dra. Laura Ayres",
    "home": {
     "text": "TUBARÕES",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "CBQ Tubarões"
    },
    "away": {
     "text": "GINÁSIO B",
-    "sponsor": "IBÉRICAFRIO"
+    "sponsor": "IBÉRICAFRIO",
+    "raw": "Ginásio B IBÉRICAFRIO"
    }
   },
   {
    "date": "2026-11-21",
    "time": "09:30",
    "venue": "Pav. Farense",
+   "venue_raw": "Pavilhão do Sporting Clube Farense",
    "home": {
     "text": "FARENSE",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "SC Farense"
    },
    "away": {
     "text": "SUB16 M",
-    "sponsor": "JPO ALUMÍNIOS"
+    "sponsor": "JPO ALUMÍNIOS",
+    "raw": "Ginásio \"JPO ALUMÍNIOS\""
    }
   },
   {
    "date": "2026-11-21",
    "time": "14:15",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB16 M B",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O. \"B\""
    },
    "away": {
     "text": "GAVIÕES",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Gaviões S.B.C."
    }
   },
   {
    "date": "2026-11-21",
    "time": "16:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "GINÁSIO",
-    "sponsor": "ANTRIX"
+    "sponsor": "ANTRIX",
+    "raw": "Ginásio ANTRIX"
    },
    "away": {
     "text": "ACADÉMICA",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Académica Efapel"
    }
   },
   {
    "date": "2026-11-21",
    "time": "18:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "GINÁSIO",
-    "sponsor": "EXZELLENZ"
+    "sponsor": "EXZELLENZ",
+    "raw": "Ginásio EXZELLENZ"
    },
    "away": {
     "text": "SIMECQ",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "SIMECQ"
    }
   },
   {
    "date": "2026-11-22",
    "time": "11:00",
    "venue": "Pav. Esc. Sec. Albufeira",
+   "venue_raw": "Pavilhão da Escola Secundária de Albufeira",
    "home": {
     "text": "CBA",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "CBA FCC EQ HOTELEIROS"
    },
    "away": {
     "text": "MINI12 M",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O."
    }
   },
   {
    "date": "2026-11-22",
    "time": "14:30",
    "venue": "Pav. Francisco Neves",
+   "venue_raw": "Pavilhão Municipal Francisco Neves - Imortal",
    "home": {
     "text": "IMORTAL",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Imortal ALGAREXPERIENCE"
    },
    "away": {
     "text": "SUB18 F",
-    "sponsor": "CLUBEHOUSEMEDIA"
+    "sponsor": "CLUBEHOUSEMEDIA",
+    "raw": "Ginásio \"CLUBEHOUSEMEDIA\""
    }
   },
   {
    "date": "2026-11-22",
    "time": "16:30",
    "venue": "Pav. Boavista",
+   "venue_raw": "Pavilhão Desportivo da Boavista",
    "home": {
     "text": "PORTIMONENSE A",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Portimonense SC \"A\""
    },
    "away": {
     "text": "SUB18 M A",
-    "sponsor": "BIC"
+    "sponsor": "BIC",
+    "raw": "Ginásio \"BIC\" A"
    }
   },
   {
    "date": "2026-11-22",
    "time": "16:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB18 M B",
-    "sponsor": "BIC"
+    "sponsor": "BIC",
+    "raw": "Ginásio \"BIC\" B"
    },
    "away": {
     "text": "JUVENTUDE",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Juventude BC"
    }
   },
   {
    "date": "2026-11-27",
    "time": "21:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "GINÁSIO B",
-    "sponsor": "IBÉRICAFRIO"
+    "sponsor": "IBÉRICAFRIO",
+    "raw": "Ginásio B IBÉRICAFRIO"
    },
    "away": {
     "text": "FERRAGUDO",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "ACD Ferragudo"
    }
   },
   {
    "date": "2026-11-28",
    "time": "09:30",
    "venue": "Pav. Penha",
+   "venue_raw": "Pavilhão Municipal da Penha",
    "home": {
     "text": "BONJOANENSES",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Os Bonjoanenses"
    },
    "away": {
     "text": "MINI12 F",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O."
    }
   },
   {
    "date": "2026-11-28",
    "time": "11:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "MINI12 M",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O."
    },
    "away": {
     "text": "PORTIMONENSE A",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Portimonense SC \"A\""
    }
   },
   {
    "date": "2026-11-28",
    "time": "15:00",
    "venue": "Pav. Comp. Desp. João Carlos Cifuentes",
+   "venue_raw": "Pav. Comp. Desp. João Carlos Cifuentes",
    "home": {
     "text": "QUELUZ",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Clube Basket Queluz"
    },
    "away": {
     "text": "GINÁSIO",
-    "sponsor": "ANTRIX"
+    "sponsor": "ANTRIX",
+    "raw": "Ginásio ANTRIX"
    }
   },
   {
    "date": "2026-11-28",
    "time": "16:30",
    "venue": "Pav. Engº Augusto Correia",
+   "venue_raw": "Pav. Engº Augusto Correia",
    "home": {
     "text": "OLIVAIS",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Olivais FC"
    },
    "away": {
     "text": "GINÁSIO",
-    "sponsor": "EXZELLENZ"
+    "sponsor": "EXZELLENZ",
+    "raw": "Ginásio EXZELLENZ"
    }
   },
   {
    "date": "2026-11-29",
    "time": "09:30",
    "venue": "Pav. Penha",
+   "venue_raw": "Pavilhão Municipal da Penha",
    "home": {
     "text": "BONJOANENSES",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Os Bonjoanenses"
    },
    "away": {
     "text": "SUB14 M",
-    "sponsor": "FARMÁCIA PROGRESSO"
+    "sponsor": "FARMÁCIA PROGRESSO",
+    "raw": "GCO \"FARMÁCIA PROGRESSO\""
    }
   },
   {
    "date": "2026-11-29",
    "time": "11:30",
    "venue": "Pav. Beja",
+   "venue_raw": "Pavilhão Municipal Beja",
    "home": {
     "text": "BEJA",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Beja Basket Clube"
    },
    "away": {
     "text": "SUB14 F",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Ginásio C.O."
    }
   },
   {
    "date": "2026-11-29",
    "time": "11:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB18 F",
-    "sponsor": "CLUBEHOUSEMEDIA"
+    "sponsor": "CLUBEHOUSEMEDIA",
+    "raw": "Ginásio \"CLUBEHOUSEMEDIA\""
    },
    "away": {
     "text": "TAVIRA",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "CB Tavira"
    }
   },
   {
    "date": "2026-11-29",
    "time": "17:00",
    "venue": "Pav. Boavista",
+   "venue_raw": "Pavilhão Desportivo da Boavista",
    "home": {
     "text": "PORTIMONENSE B",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Portimonense SC \"B\""
    },
    "away": {
     "text": "SUB18 M B",
-    "sponsor": "BIC"
+    "sponsor": "BIC",
+    "raw": "Ginásio \"BIC\" B"
    }
   },
   {
    "date": "2026-12-01",
    "time": "14:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB18 F",
-    "sponsor": "CLUBEHOUSEMEDIA"
+    "sponsor": "CLUBEHOUSEMEDIA",
+    "raw": "Ginásio \"CLUBEHOUSEMEDIA\""
    },
    "away": {
     "text": "IMORTAL",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Imortal ALGAREXPERIENCE"
    }
   },
   {
    "date": "2026-12-01",
    "time": "16:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB14 M",
-    "sponsor": "FARMÁCIA PROGRESSO"
+    "sponsor": "FARMÁCIA PROGRESSO",
+    "raw": "GCO \"FARMÁCIA PROGRESSO\""
    },
    "away": {
     "text": "PORTIMONENSE A",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Portimonense SC \"A\""
    }
   },
   {
    "date": "2026-12-01",
    "time": "18:30",
    "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
    "home": {
     "text": "SUB18 M A",
-    "sponsor": "BIC"
+    "sponsor": "BIC",
+    "raw": "Ginásio \"BIC\" A"
    },
    "away": {
     "text": "BONJOANENSES",
-    "sponsor": ""
+    "sponsor": "",
+    "raw": "Os Bonjoanenses"
    }
   }
  ]
