@@ -1,22 +1,6 @@
 {
- "updated_at": "2026-11-02T23:47+00:00",
+ "updated_at": "2026-11-03T14:47+00:00",
  "games": [
-  {
-   "date": "2026-11-02",
-   "time": "21:00",
-   "venue": "Pav. Albufeira",
-   "venue_raw": "Pavilhão Desportivo de Albufeira",
-   "home": {
-    "text": "IMORTAL",
-    "sponsor": "",
-    "raw": "Imortal PNEU RÁPIDO"
-   },
-   "away": {
-    "text": "GINÁSIO B",
-    "sponsor": "IBÉRICAFRIO",
-    "raw": "Ginásio B IBÉRICAFRIO"
-   }
-  },
   {
    "date": "2026-11-05",
    "time": "21:00",
@@ -297,7 +281,7 @@
    "home": {
     "text": "ILLIABUM",
     "sponsor": "",
-    "raw": "Illiabum Clube Margres"
+    "raw": "ILLIABUM CLUBE/MARGRES"
    },
    "away": {
     "text": "GINÁSIO",
