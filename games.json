@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-04T22:20+00:00",
+ "updated_at": "2026-11-05T15:06+00:00",
  "games": [
   {
    "date": "2026-11-05",
@@ -767,6 +767,102 @@
     "text": "BONJOANENSES",
     "sponsor": "",
     "raw": "Os Bonjoanenses"
+   }
+  },
+  {
+   "date": "2026-12-05",
+   "time": "09:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "MINI12 F",
+    "sponsor": "",
+    "raw": "Ginásio C.O."
+   },
+   "away": {
+    "text": "GAVIÕES",
+    "sponsor": "",
+    "raw": "Gaviões S.B.C."
+   }
+  },
+  {
+   "date": "2026-12-05",
+   "time": "11:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "MINI12 M",
+    "sponsor": "",
+    "raw": "Ginásio C.O."
+   },
+   "away": {
+    "text": "IMORTAL 2015",
+    "sponsor": "",
+    "raw": "IMORTAL 2015 SEACRET TOUR"
+   }
+  },
+  {
+   "date": "2026-12-05",
+   "time": "14:15",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "SUB16 F",
+    "sponsor": "OPTICÁLIA",
+    "raw": "Ginásio \"OPTICÁLIA\""
+   },
+   "away": {
+    "text": "BEJA",
+    "sponsor": "",
+    "raw": "Beja Basket Clube"
+   }
+  },
+  {
+   "date": "2026-12-05",
+   "time": "14:30",
+   "venue": "Pav. VRSA",
+   "venue_raw": "Pavilhão Municipal de Vila Real de Santo António",
+   "home": {
+    "text": "JUVENTUDE",
+    "sponsor": "",
+    "raw": "Juventude BC"
+   },
+   "away": {
+    "text": "SUB16 M B",
+    "sponsor": "",
+    "raw": "Ginásio C.O. \"B\""
+   }
+  },
+  {
+   "date": "2026-12-05",
+   "time": "16:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "GINÁSIO",
+    "sponsor": "ANTRIX",
+    "raw": "Ginásio ANTRIX"
+   },
+   "away": {
+    "text": "GALITOS BARREIRO",
+    "sponsor": "",
+    "raw": "Galitos Barreiro ACEDE"
+   }
+  },
+  {
+   "date": "2026-12-05",
+   "time": "18:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "GINÁSIO",
+    "sponsor": "EXZELLENZ",
+    "raw": "Ginásio EXZELLENZ"
+   },
+   "away": {
+    "text": "SPORT ALGÉS E DAFUNDO",
+    "sponsor": "",
+    "raw": "Sport Algés e Dafundo"
    }
   }
  ]
