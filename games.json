@@ -1,38 +1,6 @@
 {
- "updated_at": "2026-11-05T22:29+00:00",
+ "updated_at": "2026-11-06T14:44+00:00",
  "games": [
-  {
-   "date": "2026-11-05",
-   "time": "21:00",
-   "venue": "Pav. Esc. Sec. Albufeira",
-   "venue_raw": "Pavilhão da Escola Secundária de Albufeira",
-   "home": {
-    "text": "CBA",
-    "sponsor": "",
-    "raw": "CBA"
-   },
-   "away": {
-    "text": "SUB18 M B",
-    "sponsor": "BIC",
-    "raw": "Ginásio \"BIC\" B"
-   }
-  },
-  {
-   "date": "2026-11-05",
-   "time": "21:30",
-   "venue": "Pav. GCO",
-   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
-   "home": {
-    "text": "SUB18 M A",
-    "sponsor": "BIC",
-    "raw": "Ginásio \"BIC\" A"
-   },
-   "away": {
-    "text": "IBC",
-    "sponsor": "",
-    "raw": "IBC L37BUILDING SERVICES"
-   }
-  },
   {
    "date": "2026-11-07",
    "time": "09:30",
@@ -423,9 +391,9 @@
    "venue": "Pav. Farense",
    "venue_raw": "Pavilhão do Sporting Clube Farense",
    "home": {
-    "text": "FARENSE A",
+    "text": "FARENSE SISTEMA U",
     "sponsor": "",
-    "raw": "SC Farense \"A\""
+    "raw": "SC Farense - Sistema U"
    },
    "away": {
     "text": "SUB18 M A",
@@ -863,6 +831,70 @@
     "text": "SPORT ALGÉS E DAFUNDO",
     "sponsor": "",
     "raw": "Sport Algés e Dafundo"
+   }
+  },
+  {
+   "date": "2026-12-06",
+   "time": "09:30",
+   "venue": "Pav. Francisco Neves",
+   "venue_raw": "Pavilhão Municipal Francisco Neves - Imortal",
+   "home": {
+    "text": "IMORTAL ALBUFEIRA",
+    "sponsor": "",
+    "raw": "Imortal CCAM Albufeira"
+   },
+   "away": {
+    "text": "SUB14 M",
+    "sponsor": "FARMÁCIA PROGRESSO",
+    "raw": "GCO \"FARMÁCIA PROGRESSO\""
+   }
+  },
+  {
+   "date": "2026-12-06",
+   "time": "11:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "SUB16 M",
+    "sponsor": "JPO ALUMÍNIOS",
+    "raw": "Ginásio \"JPO ALUMÍNIOS\""
+   },
+   "away": {
+    "text": "TUBARÕES",
+    "sponsor": "",
+    "raw": "CBQ Tubarões"
+   }
+  },
+  {
+   "date": "2026-12-06",
+   "time": "14:15",
+   "venue": "Pav. Boavista",
+   "venue_raw": "Pavilhão Desportivo da Boavista",
+   "home": {
+    "text": "PORTIMONENSE",
+    "sponsor": "",
+    "raw": "Portimonense SC"
+   },
+   "away": {
+    "text": "SUB18 F",
+    "sponsor": "CLUBEHOUSEMEDIA",
+    "raw": "Ginásio \"CLUBEHOUSEMEDIA\""
+   }
+  },
+  {
+   "date": "2026-12-06",
+   "time": "17:00",
+   "venue": "Pav. Beja",
+   "venue_raw": "Pavilhão Municipal Beja",
+   "home": {
+    "text": "BEJA",
+    "sponsor": "",
+    "raw": "Beja Basket Clube"
+   },
+   "away": {
+    "text": "GINÁSIO B",
+    "sponsor": "IBÉRICAFRIO",
+    "raw": "Ginásio B IBÉRICAFRIO"
    }
   }
  ]
