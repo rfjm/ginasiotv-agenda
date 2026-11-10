@@ -1,22 +1,6 @@
 {
- "updated_at": "2026-11-09T17:02+00:00",
+ "updated_at": "2026-11-10T15:22+00:00",
  "games": [
-  {
-   "date": "2026-11-11",
-   "time": "21:30",
-   "venue": "Pav. GCO",
-   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
-   "home": {
-    "text": "GINÁSIO B",
-    "sponsor": "IBÉRICAFRIO",
-    "raw": "Ginásio B IBÉRICAFRIO"
-   },
-   "away": {
-    "text": "BONJOANENSES",
-    "sponsor": "",
-    "raw": "CF Os Bonjoanenses Faro"
-   }
-  },
   {
    "date": "2026-11-14",
    "time": "09:30",
