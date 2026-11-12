@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-11T23:15+00:00",
+ "updated_at": "2026-11-12T15:43+00:00",
  "games": [
   {
    "date": "2026-11-14",
@@ -831,6 +831,134 @@
     "text": "FARENSE",
     "sponsor": "",
     "raw": "SC Farense"
+   }
+  },
+  {
+   "date": "2026-12-12",
+   "time": "09:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "MINI12 F",
+    "sponsor": "",
+    "raw": "Ginásio C.O."
+   },
+   "away": {
+    "text": "PORTIMONENSE",
+    "sponsor": "",
+    "raw": "Portimonense SC"
+   }
+  },
+  {
+   "date": "2026-12-12",
+   "time": "11:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "SUB16 F",
+    "sponsor": "OPTICÁLIA",
+    "raw": "Ginásio \"OPTICÁLIA\""
+   },
+   "away": {
+    "text": "PORTIMONENSE",
+    "sponsor": "",
+    "raw": "Portimonense SC"
+   }
+  },
+  {
+   "date": "2026-12-12",
+   "time": "11:30",
+   "venue": "Pav. Esc. Laura Ayres",
+   "venue_raw": "Pavilhão Escola Sec.Dra. Laura Ayres",
+   "home": {
+    "text": "TUBARÕES",
+    "sponsor": "",
+    "raw": "CBQ Tubarões"
+   },
+   "away": {
+    "text": "MINI12 M",
+    "sponsor": "",
+    "raw": "Ginásio C.O."
+   }
+  },
+  {
+   "date": "2026-12-12",
+   "time": "14:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "SUB18 M B",
+    "sponsor": "BIC",
+    "raw": "Ginásio \"BIC\" B"
+   },
+   "away": {
+    "text": "FERRAGUDO",
+    "sponsor": "",
+    "raw": "ACDF / AC Performance"
+   }
+  },
+  {
+   "date": "2026-12-12",
+   "time": "16:00",
+   "venue": "Pav. Comendador Serafim Marques",
+   "venue_raw": "Pavilhão Comendador Serafim Marques",
+   "home": {
+    "text": "SAMPAENSE",
+    "sponsor": "",
+    "raw": "Sampaense INSPECENTRO"
+   },
+   "away": {
+    "text": "GINÁSIO",
+    "sponsor": "ANTRIX",
+    "raw": "Ginásio ANTRIX"
+   }
+  },
+  {
+   "date": "2026-12-12",
+   "time": "16:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "GINÁSIO",
+    "sponsor": "EXZELLENZ",
+    "raw": "Ginásio EXZELLENZ"
+   },
+   "away": {
+    "text": "FERRAGUDO CIDADE LAGOA",
+    "sponsor": "",
+    "raw": "ACD Ferragudo Cidade Lagoa"
+   }
+  },
+  {
+   "date": "2026-12-12",
+   "time": "16:30",
+   "venue": "Pav. Francisco Neves",
+   "venue_raw": "Pavilhão Municipal Francisco Neves - Imortal",
+   "home": {
+    "text": "IMORTAL",
+    "sponsor": "",
+    "raw": "Imortal CAFÉ OCEANO"
+   },
+   "away": {
+    "text": "SUB16 M",
+    "sponsor": "JPO ALUMÍNIOS",
+    "raw": "Ginásio \"JPO ALUMÍNIOS\""
+   }
+  },
+  {
+   "date": "2026-12-12",
+   "time": "16:30",
+   "venue": "Pav. Esc. Laura Ayres",
+   "venue_raw": "Pavilhão Escola Sec.Dra. Laura Ayres",
+   "home": {
+    "text": "TUBARÕES",
+    "sponsor": "",
+    "raw": "CBQ Tubarões"
+   },
+   "away": {
+    "text": "SUB18 M A",
+    "sponsor": "BIC",
+    "raw": "Ginásio \"BIC\" A"
    }
   }
  ]
