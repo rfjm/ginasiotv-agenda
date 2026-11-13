@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-12T22:32+00:00",
+ "updated_at": "2026-11-13T15:02+00:00",
  "games": [
   {
    "date": "2026-11-14",
@@ -959,6 +959,70 @@
     "text": "SUB18 M A",
     "sponsor": "BIC",
     "raw": "Ginásio \"BIC\" A"
+   }
+  },
+  {
+   "date": "2026-12-13",
+   "time": "09:00",
+   "venue": "Pav. Eduardo Mansinho - Tavira",
+   "venue_raw": "Pavilhão Municipal Dr. Eduardo Mansinho - Tavira",
+   "home": {
+    "text": "TAVIRA",
+    "sponsor": "",
+    "raw": "CB Tavira"
+   },
+   "away": {
+    "text": "SUB18 F",
+    "sponsor": "CLUBEHOUSEMEDIA",
+    "raw": "Ginásio \"CLUBEHOUSEMEDIA\""
+   }
+  },
+  {
+   "date": "2026-12-13",
+   "time": "09:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "SUB14 M",
+    "sponsor": "FARMÁCIA PROGRESSO",
+    "raw": "GCO \"FARMÁCIA PROGRESSO\""
+   },
+   "away": {
+    "text": "FARENSE A",
+    "sponsor": "",
+    "raw": "SC Farense \"A\""
+   }
+  },
+  {
+   "date": "2026-12-13",
+   "time": "11:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "SUB14 F",
+    "sponsor": "",
+    "raw": "Ginásio C.O."
+   },
+   "away": {
+    "text": "PORTIMONENSE B",
+    "sponsor": "",
+    "raw": "Portimonense SC \"B\""
+   }
+  },
+  {
+   "date": "2026-12-13",
+   "time": "14:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "SUB16 M B",
+    "sponsor": "",
+    "raw": "Ginásio C.O. \"B\""
+   },
+   "away": {
+    "text": "BONJOANENSES",
+    "sponsor": "",
+    "raw": "Os Bonjoanenses"
    }
   }
  ]
