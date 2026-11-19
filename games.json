@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T23:14+00:00",
+ "updated_at": "2026-11-19T16:14+00:00",
  "games": [
   {
    "date": "2026-11-19",
@@ -831,6 +831,54 @@
     "text": "BONJOANENSES",
     "sponsor": "",
     "raw": "CF Os Bonjoanenses Faro"
+   }
+  },
+  {
+   "date": "2026-12-19",
+   "time": "16:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "GINÁSIO",
+    "sponsor": "ANTRIX",
+    "raw": "Ginásio ANTRIX"
+   },
+   "away": {
+    "text": "GALITOS",
+    "sponsor": "",
+    "raw": "Galitos HELIFLEX"
+   }
+  },
+  {
+   "date": "2026-12-19",
+   "time": "18:30",
+   "venue": "Pav. GCO",
+   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
+   "home": {
+    "text": "SUB18 M B",
+    "sponsor": "BIC",
+    "raw": "Ginásio \"BIC\" B"
+   },
+   "away": {
+    "text": "CBA",
+    "sponsor": "",
+    "raw": "CBA"
+   }
+  },
+  {
+   "date": "2026-12-19",
+   "time": "19:00",
+   "venue": "Pav. Bairro Padre Cruz",
+   "venue_raw": "Pavilhão Municipal Bairro Padre Cruz",
+   "home": {
+    "text": "CARNIDE",
+    "sponsor": "",
+    "raw": "Carnide Clube"
+   },
+   "away": {
+    "text": "GINÁSIO",
+    "sponsor": "EXZELLENZ",
+    "raw": "Ginásio EXZELLENZ"
    }
   }
  ]
