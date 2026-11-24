@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T18:55+00:00",
+ "updated_at": "2026-11-24T18:33+00:00",
  "games": [
   {
    "date": "2026-11-27",
@@ -227,22 +227,6 @@
   },
   {
    "date": "2026-12-05",
-   "time": "14:15",
-   "venue": "Pav. GCO",
-   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
-   "home": {
-    "text": "SUB16 F",
-    "sponsor": "OPTICÁLIA",
-    "raw": "Ginásio \"OPTICÁLIA\""
-   },
-   "away": {
-    "text": "BEJA",
-    "sponsor": "",
-    "raw": "Beja Basket Clube"
-   }
-  },
-  {
-   "date": "2026-12-05",
    "time": "14:30",
    "venue": "Pav. VRSA",
    "venue_raw": "Pavilhão Municipal de Vila Real de Santo António",
@@ -355,22 +339,6 @@
   },
   {
    "date": "2026-12-08",
-   "time": "09:30",
-   "venue": "Pav. Francisco Neves",
-   "venue_raw": "Pavilhão Municipal Francisco Neves - Imortal",
-   "home": {
-    "text": "IBC GELATARIA",
-    "sponsor": "",
-    "raw": "IBC Gelataria DONATELLA"
-   },
-   "away": {
-    "text": "SUB14 F",
-    "sponsor": "",
-    "raw": "Ginásio C.O."
-   }
-  },
-  {
-   "date": "2026-12-08",
    "time": "11:30",
    "venue": "Pav. Farense",
    "venue_raw": "Pavilhão do Sporting Clube Farense",
@@ -419,7 +387,7 @@
   },
   {
    "date": "2026-12-08",
-   "time": "14:30",
+   "time": "16:30",
    "venue": "Pav. Portimão",
    "venue_raw": "Pavilhão Gimnodesportivo de Portimão",
    "home": {
@@ -591,6 +559,22 @@
     "text": "SUB18 M A",
     "sponsor": "BIC",
     "raw": "Ginásio \"BIC\" A"
+   }
+  },
+  {
+   "date": "2026-12-12",
+   "time": "18:30",
+   "venue": "Pav. Francisco Neves",
+   "venue_raw": "Pavilhão Municipal Francisco Neves - Imortal",
+   "home": {
+    "text": "IBC GELATARIA",
+    "sponsor": "",
+    "raw": "IBC Gelataria DONATELLA"
+   },
+   "away": {
+    "text": "SUB14 F",
+    "sponsor": "",
+    "raw": "Ginásio C.O."
    }
   },
   {
