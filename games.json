@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T17:28+00:00",
+ "updated_at": "2026-11-27T17:08+00:00",
  "games": [
   {
    "date": "2026-11-27",
@@ -143,22 +143,6 @@
     "text": "SUB18 M B",
     "sponsor": "BIC",
     "raw": "Ginásio \"BIC\" B"
-   }
-  },
-  {
-   "date": "2026-12-01",
-   "time": "14:30",
-   "venue": "Pav. GCO",
-   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
-   "home": {
-    "text": "SUB18 F",
-    "sponsor": "CLUBEHOUSEMEDIA",
-    "raw": "Ginásio \"CLUBEHOUSEMEDIA\""
-   },
-   "away": {
-    "text": "IMORTAL",
-    "sponsor": "",
-    "raw": "Imortal ALGAREXPERIENCE"
    }
   },
   {
