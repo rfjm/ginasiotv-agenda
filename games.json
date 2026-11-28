@@ -1,22 +1,6 @@
 {
- "updated_at": "2026-11-27T17:08+00:00",
+ "updated_at": "2026-11-28T15:55+00:00",
  "games": [
-  {
-   "date": "2026-11-27",
-   "time": "21:30",
-   "venue": "Pav. GCO",
-   "venue_raw": "Pavilhão do Ginásio Clube Olhanense",
-   "home": {
-    "text": "GINÁSIO B",
-    "sponsor": "IBÉRICAFRIO",
-    "raw": "Ginásio B IBÉRICAFRIO"
-   },
-   "away": {
-    "text": "FERRAGUDO",
-    "sponsor": "",
-    "raw": "ACD Ferragudo"
-   }
-  },
   {
    "date": "2026-11-28",
    "time": "09:30",
